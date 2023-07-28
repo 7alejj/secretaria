@@ -1,0 +1,318 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.3
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 28-01-2019 a las 21:40:38
+-- Versión del servidor: 10.1.35-MariaDB
+-- Versión de PHP: 7.2.9
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `sirius`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `alumno`
+--
+
+CREATE TABLE `alumno` (
+  `DNI` date NOT NULL,
+  `Cuil` text NOT NULL,
+  `Apellido` text NOT NULL,
+  `Nombre` int(25) NOT NULL,
+  `F_nacimiento` int(10) NOT NULL,
+  `Sexo` int(20) NOT NULL,
+  `calle` varchar(45) NOT NULL,
+  `n_calle` int(11) NOT NULL,
+  `Localidad` int(30) NOT NULL,
+  `Télefono` int(11) NOT NULL,
+  `id_curso` int(15) NOT NULL,
+  `Escuela_de_procedencia` int(40) NOT NULL,
+  `Transporte` int(2) NOT NULL,
+  `Linea` int(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `asistencia`
+--
+
+CREATE TABLE `asistencia` (
+  `id_asistencia` int(255) NOT NULL,
+  `Fecha` date NOT NULL,
+  `DNI_Preceptor` date NOT NULL,
+  `id_curso` varchar(255) NOT NULL,
+  `Apellido` text NOT NULL,
+  `Aumno_esta` text NOT NULL,
+  `Llegada` int(10) NOT NULL,
+  `Hora` int(7) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `año`
+--
+
+CREATE TABLE `año` (
+  `id_año` int(11) NOT NULL,
+  `año` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `curso`
+--
+
+CREATE TABLE `curso` (
+  `id_curso` int(11) NOT NULL,
+  `curso` date NOT NULL,
+  `división` date NOT NULL,
+  `especialidad` date NOT NULL,
+  `grupo` date NOT NULL,
+  `turno` text NOT NULL,
+  `id_año` decimal(10,0) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `materia`
+--
+
+CREATE TABLE `materia` (
+  `codigo_materia` int(11) NOT NULL,
+  `materia_impartida` int(11) NOT NULL,
+  `horas_impartidas` int(11) NOT NULL,
+  `DNI_profesor` int(11) NOT NULL,
+  `DNI_Aalumno` int(11) NOT NULL,
+  `1_trimestre` int(11) NOT NULL,
+  `2_trimestre` int(11) NOT NULL,
+  `3_trimestre` int(11) NOT NULL,
+  `materia_promedio` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `nivel`
+--
+
+CREATE TABLE `nivel` (
+  `id_nivel` int(11) NOT NULL,
+  `nivel` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `notas`
+--
+
+CREATE TABLE `notas` (
+  `id_notas` int(11) NOT NULL,
+  `DNI` int(11) NOT NULL,
+  `id_trimestre` int(11) NOT NULL,
+  `nota1` int(11) NOT NULL,
+  `nota2` int(11) NOT NULL,
+  `nota3` int(11) NOT NULL,
+  `promedio` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `preceptor`
+--
+
+CREATE TABLE `preceptor` (
+  `DNI` date NOT NULL,
+  `Cuil` text NOT NULL,
+  `Apellido` text NOT NULL,
+  `Nombre` int(25) NOT NULL,
+  `F_nacimiento` int(10) NOT NULL,
+  `Sexo` int(20) NOT NULL,
+  `Dirección` int(45) NOT NULL,
+  `Localidad` int(30) NOT NULL,
+  `Télefono` int(11) NOT NULL,
+  `Grupo` int(2) NOT NULL,
+  `Turno` int(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `profesor`
+--
+
+CREATE TABLE `profesor` (
+  `DNI` date NOT NULL,
+  `Cuil` text NOT NULL,
+  `Apellido` text NOT NULL,
+  `Nombre` int(25) NOT NULL,
+  `F_nacimiento` int(10) NOT NULL,
+  `Sexo` int(20) NOT NULL,
+  `Dirección` int(45) NOT NULL,
+  `Localidad` int(30) NOT NULL,
+  `Télefono` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `trimestre`
+--
+
+CREATE TABLE `trimestre` (
+  `id_trimestre` int(11) NOT NULL,
+  `1_trimestre` int(2) NOT NULL,
+  `2_trimestre` int(2) NOT NULL,
+  `3_trimestre` int(2) NOT NULL,
+  `trimestre _final` int(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(15) DEFAULT NULL,
+  `apellido` varchar(15) DEFAULT NULL,
+  `usuario` varchar(55) DEFAULT NULL,
+  `password` tinytext
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `usuario`, `password`) VALUES
+(10, 'maxi', 'pintos', 'fer66', 'c85b71ed8645a0de69d9262f2e3588a6ed8d3e9a'),
+(11, 'maxi', 'pintos', 'ol', 'c85b71ed8645a0de69d9262f2e3588a6ed8d3e9a'),
+(12, 'asas', 'asas', 'asas', '7ddbb6309d14a74d92e31b26f3ff5454dfa0708b');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `alumno`
+--
+ALTER TABLE `alumno`
+  ADD PRIMARY KEY (`DNI`),
+  ADD KEY `id_curso` (`id_curso`);
+
+--
+-- Indices de la tabla `asistencia`
+--
+ALTER TABLE `asistencia`
+  ADD PRIMARY KEY (`id_asistencia`),
+  ADD KEY `DNI_Preceptor` (`DNI_Preceptor`),
+  ADD KEY `DNI_Alumno` (`id_curso`);
+
+--
+-- Indices de la tabla `año`
+--
+ALTER TABLE `año`
+  ADD PRIMARY KEY (`id_año`);
+
+--
+-- Indices de la tabla `curso`
+--
+ALTER TABLE `curso`
+  ADD KEY `id_año` (`id_año`);
+
+--
+-- Indices de la tabla `materia`
+--
+ALTER TABLE `materia`
+  ADD PRIMARY KEY (`codigo_materia`),
+  ADD KEY `DNI_profesor` (`DNI_profesor`),
+  ADD KEY `DNI_Aalumno` (`DNI_Aalumno`);
+
+--
+-- Indices de la tabla `nivel`
+--
+ALTER TABLE `nivel`
+  ADD PRIMARY KEY (`id_nivel`);
+
+--
+-- Indices de la tabla `notas`
+--
+ALTER TABLE `notas`
+  ADD KEY `id_trimestre` (`id_trimestre`);
+
+--
+-- Indices de la tabla `preceptor`
+--
+ALTER TABLE `preceptor`
+  ADD PRIMARY KEY (`DNI`);
+
+--
+-- Indices de la tabla `profesor`
+--
+ALTER TABLE `profesor`
+  ADD PRIMARY KEY (`DNI`);
+
+--
+-- Indices de la tabla `trimestre`
+--
+ALTER TABLE `trimestre`
+  ADD PRIMARY KEY (`id_trimestre`);
+
+--
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD UNIQUE KEY `unico` (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `asistencia`
+--
+ALTER TABLE `asistencia`
+  MODIFY `id_asistencia` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `año`
+--
+ALTER TABLE `año`
+  MODIFY `id_año` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `trimestre`
+--
+ALTER TABLE `trimestre`
+  MODIFY `id_trimestre` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

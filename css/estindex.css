@@ -1,0 +1,383 @@
+*{
+    padding: 0px;
+    margin: 0px; 
+    font-family: sans-serif;
+}
+/*       */
+header{
+    height: 17%;
+    background-image: url(../img/fondofach1.jpg);
+}
+#div1{
+    display: flex;
+    margin-left: 10%;
+}
+header img{
+    height: 6em;
+    width: 4em;
+}
+header a{
+    font-family: Nirmala UI;
+    color:#333A56;
+    padding-left: 20px;
+    text-decoration: none;
+    margin: auto 10px;
+    letter-spacing: 2px;
+    font-size: 35px;
+    }
+
+#nav ul{
+    background: #333A56;
+    display: flex;
+    height: 3em;
+    text-align: center;
+    list-style: none;
+    
+}
+#nav .li{
+    display: inline-block;
+    height: 100%;
+    flex-grow: 1;
+    list-style: none;
+    text-align: center;
+    transition: 0.4s;
+    position: relative;
+    height: 3em;
+}
+
+
+#body2 select{
+    flex-grow: 1;
+    border-radius: 2px;
+    background:#DEE2F1;
+    font-size: 20px;
+    color: #000;
+    height: 2em;
+    
+}
+#body2 .box{
+    display: block;
+    
+}
+.div3 select{
+    width: 100%;
+    border-radius: 2px;
+    background:#DEE2F1;
+    font-size: 20px;
+    color: #000;
+    height: 2em;
+    margin: auto;
+    
+}
+
+#nav .a-s6{
+    display: inherit;
+    padding-top: 7px;
+    font-size: 23px;
+    text-decoration: none;
+    color: white;
+    }
+#nav .li:hover{
+    background-color:#49506C;
+    }
+
+.activo{
+    background-color:#49506C;
+}
+
+body{
+    background: #e8e8e8;
+    height: 100%;
+    
+}
+#body1{
+    
+    background-image: url(../img/fondofach1.jpg);
+    display: flex;
+    width: 70%;
+    margin: auto;
+    height: 38em;
+}
+
+.div2{
+    min-height: 25em;
+    height: 25em;
+    margin: 2em auto;
+    min-width: 35%;
+    border: 1px black solid;
+    display: inline-flex;
+    background: white;
+    border-radius: 10px;
+    background: #333A56;
+}
+.div2 form img{
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 90px;
+    padding-bottom: 10px;
+}
+#imgg{
+    width: 115px;
+    height: 110px;
+    padding-bottom: 10px;
+}
+
+.div2 h2{
+    margin: auto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.div2 form{
+    width: 100%;
+    display: inline-block;
+    margin: auto;
+    color: #DEE2F1;
+    
+}
+.div2 label{
+    font-size: 18px;
+}
+.div2 input{
+    background: #E8e8e8;
+    font-size: 18px;
+    transition: 0.7s;
+    box-sizing: border-box;
+    display: block; 
+    margin: 10px auto;
+    width: 95%;
+    height: 2em;
+    border: none;
+    border-bottom: 2px solid #e8e8e8;
+    border-radius: 2px;
+} 
+.div2 input:focus {
+    outline:none;
+    border-bottom: 2px solid #343B4E;
+    background: #fff;
+}
+
+.div2 .b1{
+    cursor: pointer;
+    width: 100px;
+    margin-top: 25px;
+    background:;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px darkgray;
+}
+
+/*     REGISTRO      */
+
+#body2{
+    background-image: url(../img/fondofach1.jpg);
+    display: block;
+    width: 70%;
+    margin: auto;
+    min-height: 43em;
+    height: auto;
+}
+
+#body2 h2{
+    color: darkslategrey;
+    font-size: 40px;
+    letter-spacing: 6px;
+    padding: 22px 0px 22px 30px;
+    
+}
+
+#body2 form{
+    margin: auto;
+}
+.div3 div{
+    width: 50%;
+    padding: 10px;
+    display: block;
+    margin: 1em auto;
+    border: 0px solid black;
+    
+}
+#body2 h3{
+    display: block;
+}
+.div4{
+    margin: auto;
+    box-sizing: padding-box;
+    padding: 3px 3px 3px 12px;
+    border: 0px solid black;
+    width: 94%;
+}
+
+.div3{
+    margin: auto;
+    display: flex;
+    flex-grow: 1;
+    padding: 3px;
+    border: 0px black solid;
+    width: 95%;
+}
+
+.div3 input{
+    width: 98%;
+    background: #E8e8e8;
+    font-size: 18px;
+    transition: 0.7s;
+    box-sizing: border-box;
+    display: block; 
+    margin: auto;
+    height: 2em;
+    border: none;
+    border-bottom: 2px solid #e8e8e8;
+    border-radius: 2px;
+}
+.div3 input:focus {
+    outline:none;
+    border-bottom: 2px solid #343B4E;
+    background: #fff;
+}
+.div4 input{
+    width: 49%;
+    background: #E8e8e8;
+    font-size: 18px;
+    transition: 0.7s;
+    box-sizing: border-box;
+    margin:  6px auto;
+    height: 2em;
+    border: none;
+    border-bottom: 2px solid #e8e8e8;
+    border-radius: 2px;
+}
+.div4 input:focus {
+    outline:none;
+    border-bottom: 2px solid #343B4E;
+    background: #fff;
+}
+#body2 form{
+    font-size: 20px;
+    color:#343B4E;
+}
+.div5{
+    margin: 5px;
+    display: flex;
+}
+
+.div5 .b1{
+    margin: auto;
+    display: inline-block;
+    font-size: 18px;
+    color: #e8e8e8;
+    cursor: pointer;
+    width: 14em;
+    height: 3em;
+    background: #5A6277;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px darkgray;
+}
+
+#body3{
+    margin: auto;
+    height: auto;
+    background: url(../img/fondofach1.jpg);
+    width: 75%;
+}
+
+
+.help h1{
+    font-size: 34px;
+    margin: 3% 5% 3% 5% ; 
+}
+.help h2{
+    color: #333A56;
+    margin: 3% 6% 1% 5% ; 
+    }
+.help h3{
+    margin: 0% 6% 1% 5% ; 
+}
+
+
+.bodyforhelp{
+    background: url(../img/fondofach1.jpg);
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+    height: auto;
+    width: 85%;
+}
+
+
+.subject{ 
+     writing-mode: vertical-lr;
+     font-size: 20px;
+    transform: rotate(180deg);
+    margin: auto;
+} 
+.td-sj{
+    text-align: center;
+    height: 14em;
+    width: 2.5%;
+}
+.td-sj > h2{
+    margin: auto;
+    font-size: 25px;
+}
+#tabl-2 .td-xp{
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+}
+.invert{ 
+    margin:auto;
+     writing-mode: vertical-lr;
+     font-size: 20px;
+    transform: rotate(180deg);
+}
+
+#tabl-2{
+    width: 100%;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    margin: auto;
+    
+}
+
+#tabl-2 col{
+    background: #333A56;
+    border: 0px solid black;
+    border-spacing: 0;
+}
+#tabl-2 h3{
+    color: #e3e3e3;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+#tabl-2 td{
+    border: solid black 0px;
+    text-align: center;
+} 
+
+.td-f{
+    padding: 5px;
+    width:30em;
+}
+
+.td-l{
+    background: #5A6277;
+}
+
+#body4{
+    
+    background-image: url(../img/fondofach1.jpg);
+    display:  block;
+    width: 100%;
+    margin: auto;
+}
+
+#tabl-3{
+    height: 6em;
+    width: 100%;
+    background: #333A56;
+    color: #e3e3e3;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+}

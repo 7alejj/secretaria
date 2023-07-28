@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/css?family=Exo:400,600,400italic,600italic);
+
+html, body{
+    background: #333;
+    margin: 0;
+    text-align: center;
+    font-family:'Exo', sans-serif;    
+}
+
+.wrap{
+    display: block;
+    width: 1000px;
+    height: auto;
+    min-height: 300px;
+    }
+header{
+    display: block;
+    width: 100%;
+    height: 100px;
+    margin: 15px 0 0 0;
+    background: black;
+    line-height: 100px;
+}
+
+nav{
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin: 10px 0 0px 0;
+    background:orange;
+}
+
+article{
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+    height: 500px;
+    background:teal;
+    margin: 10px 0 0 0;
+    line-height: 500px;
+}
+
+aside{
+    display: inline-block;
+    vertical-align: top;
+    width: 29%;
+    height: 500px;
+    background:olive;
+    margin: 10px 0 0 0;
+    height: 500px;
+    line-height: 500px;
+}
+
+footer{
+    display: block;
+    width: 100%;
+    height: 80px;
+    margin: 15px 0 0 0;
+    background: maroon;
+    line-height: 80px;
+    margin: 0 0 10px 0;
+}
+
+header h1, article h1, aside h1, nav h1, footer h1{
+    color: white;
+    font-weight: 600;
+}
+
+
+
+/*estilos especificos*/
+#nav > a{
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    text-shadow: #000 0 -1px 0;
+    }
+#nav > a:hover{
+    background-color:red;
+    }
+
+.activo{background-color:teal;}
+
+
